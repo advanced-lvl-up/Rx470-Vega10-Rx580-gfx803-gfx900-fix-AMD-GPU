@@ -1,7 +1,7 @@
 unofficial support for rx580, Vega 10, rx470, rx590, rx480, rx570, sp2048, or similar GFX803 & GFX900 using zluda &amp; Windows
 -----------------------------------
 
-A forum for testing unsupported hardware. Section I attempts solving various issues with AMD GFX803 & GFX900 and their limited Windows support. Feel free to copy, or improve it. This tensile library is tested for Windows Zluda only (native ROCm works also, untested), Linux version is work in progress), the provided workflows should be fine for testing any system type. Check in images-workflow folder for examples.
+A forum for testing unsupported hardware. Section I attempts solving various issues with AMD GFX803 & GFX900 and their limited Windows support. Feel free to copy, or improve it. This tensile library is tested for Windows Zluda only (native ROCm works also, untested), Linux version is work in progress.  The provided workflows should be fine for testing any system type. Check in images-workflow folder for examples.
 
 Intro, Super Ultimate Definitive Ultraman Blazar Edition Guide For Unsupported Hardware
 -----------------------------------
