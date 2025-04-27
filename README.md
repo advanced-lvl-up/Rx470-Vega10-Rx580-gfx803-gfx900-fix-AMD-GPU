@@ -8,7 +8,7 @@ Intro, Super Ultimate Definitive Ultraman Blazar Edition Guide For Unsupported H
 
 Firstly, if you have ComfyUI, SDNext or similar already up and running with Zluda, then simply replace the tensile library in ROCm Hip SDK 5.71 or Hip SDK 6.24 folder with the custom one provided. the default is typically c:/program files/AMD/ROCM/5.7/bin/rocblas/library or similar. Also put the rocblas.dll provided into c:/program files/AMD/ROCM/5.7/bin  (backup your old files first). That should be all.  Thank you for testing.
 
-Hosted here is a recompilation and potential bug fix for AMD's Tensile library for GFX803 (aka Ellesmere, Polaris, sp2048, Rx470, Rx580, R9 Fiji?, Vega, etc.) making it more stable for Zluda or ROCm generally. I'm not a programmer, many corrections are likely needed.  Some GPUs of the era (Rx580 16GB sp2048) require a mainboard with MMIO / Above 4G mapping. Refer to Section III if your board needs help enabling this option.  Change log:
+Hosted here is a recompilation and potential bug fix for AMD's Tensile library for GFX803 & GFX900 (aka Ellesmere, Polaris, sp2048, Rx470, Rx580, R9 Fiji?, Vega, etc.) making it more stable for Zluda or ROCm generally. I'm not a programmer, many corrections are likely needed.  Some GPUs of the era (Rx580 16GB sp2048) require a mainboard with MMIO / Above 4G mapping. Refer to Section III if your board needs help enabling this option.  Change log:
 
 - Looked at the Tensile 6.24 code, fixed a potential kernel bug that caused crashing, multiple memory leaks
 - Tried adding minor optimizations to the GEMM kernels for a major speed boost (in some workloads)
