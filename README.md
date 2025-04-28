@@ -30,7 +30,7 @@ First time generating using zluda requires 10 to 30 mins of compiling time for e
 
 Optional HIP SDK 6.24 support for gfx803 and gfx900:
 -----------------------------------
-Special instructions for 6.24.  You can now try HipSDK 6.24 for gfx803 and gfx900 also.  After installing 6.24, download both versions of zluda from the link above. Then install `ZLUDA-windows-rocm6-amd64.zip` for SDK6.   Afterwards, replace the `nvcuda.dll` file in your zluda directory with the one from `ZLUDA-windows-rocm5-amd64.zip`.  Then install my fix as usual into `c:/program files/AMD/ROCM/6.2/bin` along with the library to `c:/program files/AMD/ROCM/6.2/bin/rocblas/library`  This allows legacy archs to use 6.24. (Experimental, you probably wont need this?)
+Special instructions for 6.24.  You can now try HipSDK 6.24 for gfx803 and gfx900 also.  After installing 6.24, download both versions of zluda from the link above. Then install `ZLUDA-windows-rocm6-amd64.zip` for SDK6.   Afterwards, replace the `nvcuda.dll` file in your zluda directory with the one from `ZLUDA-windows-rocm5-amd64.zip`.  Then install my rocblas.dll fix as usual into `c:/program files/AMD/ROCM/6.2/bin` along with the library to `c:/program files/AMD/ROCM/6.2/bin/rocblas/library`  This allows legacy archs to use 6.24. (Experimental, you probably wont need this?)
 
 Troubleshooting:  Having only one version of the SDK installed potentially helps avoid conflicts in `HIP_HOME` and `HIP_PATH` system environment variables. Also check that your user and system `path` environment variables only point to `your_chosen_path/AMD/ROCM/6.2/bin`, and not the other version if you've previously installed it.
 
