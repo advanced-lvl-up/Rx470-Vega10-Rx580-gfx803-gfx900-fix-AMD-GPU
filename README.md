@@ -17,6 +17,11 @@ Hosted here is a recompilation and potential bug fix for AMD's Tensile library f
 - UniPC Sampler now works.  Compiled optional rocblas.dll support for Hip SDK 6.24 in both 803 and 900 archs
 - Added debug kernels with modified code for fp16 accumulation. +8% faster (fp16 only) and helps GPU thermals. For testing only, at 1792x1792 pixels or with video models, you could end up with incoherent prompt following due to renormalization issues
 
+![kobold using zluda](/example-images-videos-workflows/Ultraman-battles-dino-movie.webp)
+
+GGUF, 10 steps, Euler, Teacache. See updated example images & videos with debugging workflows included. 
+
+
 You can learn more here https://github.com/vosen/ZLUDA and here https://github.com/lshqqytiger/ZLUDA
 Thank you to the authors.
 
@@ -37,6 +42,8 @@ Troubleshooting:  Having only one version of the SDK installed potentially helps
 Recommendations:
 ----------------
 Use (https://github.com/LostRuins/koboldcpp) with Vulkan from lostruins for LLM.  A kobold fork for zluda is ready but seems unecessary until fixed.  FLUX1 Schnell GGUF Quant_3ks is a good test since it can resolve in 1 step at 512x512 res in about 9 seconds, and the bulky t5 encoder is not strictly required. The gfx803 test system at native Flux resolution 768x1280 takes about 21 seconds per step. (portrait & landscape resolutions are slightly faster). Going higher than native res is not recommended.
+
+![kobold using zluda](/example-images-videos-workflows/Kobold-with-zluda.png)
 
 Disable previews. VAE decoding is still buggy in most popular implementations. Using tiled VAE if you have issues or, better yet using TinyVAE is recommended if the diffusion model supports TinyVAE. For example if VAE decode cuts into system swap memory it can sometimes crash.  This is normal.  Make sure to have a large System Page File (16GB virtual memory & higher) and keep an eye on VRAM usage to be safe, minding GPU thermals as well.
 
