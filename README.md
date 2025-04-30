@@ -41,9 +41,11 @@ Troubleshooting:  Having only one version of the SDK installed potentially helps
 
 Recommendations:
 ----------------
-Use (https://github.com/LostRuins/koboldcpp) with Vulkan from lostruins for LLM.  A kobold fork for zluda is ready but seems unecessary until fixed.  FLUX1 Schnell GGUF Quant_3ks is a good test since it can resolve in 1 step at 512x512 res in about 9 seconds, and the bulky t5 encoder is not strictly required. The gfx803 test system at native Flux resolution 768x1280 takes about 21 seconds per step. (portrait & landscape resolutions are slightly faster). Going higher than native res is not recommended.
+Use (https://github.com/LostRuins/koboldcpp) with Vulkan from lostruins for LLM.  A kobold fork for zluda is ready but seems unecessary until fixed.  
 
 ![kobold using zluda](/example-images-videos-workflows/Kobold-with-zluda.png)
+
+For everything else, use any UI you prefer.  FLUX1 Schnell GGUF Quant_3ks is a good test since it can resolve in 1 step at 512x512 res in about 9 seconds, and the bulky t5 encoder is not strictly required. The gfx803 test system at native Flux resolution 768x1280 takes about 21 seconds per step. (portrait & landscape resolutions are slightly faster). Going higher than native res is not recommended.
 
 Disable previews. VAE decoding is still buggy in most popular implementations. Using tiled VAE if you have issues or, better yet using TinyVAE is recommended if the diffusion model supports TinyVAE. For example if VAE decode cuts into system swap memory it can sometimes crash.  This is normal.  Make sure to have a large System Page File (16GB virtual memory & higher) and keep an eye on VRAM usage to be safe, minding GPU thermals as well.
 
