@@ -1,3 +1,5 @@
+`NEW UPDATE`: Custom attention function for VRAM efficiency, & 1080p image2vid workflows using only 3GB (see instructions in attention-VRAM-helper.zip file)
+
 unofficial support for rx580, Vega 10, rx470, rx590, rx480, rx570, sp2048, or similar GFX803 & GFX900 using zluda &amp; Windows
 -----------------------------------
 
@@ -16,6 +18,7 @@ Hosted here is a recompilation and potential bug fix for AMD's Tensile library f
 - Enabled inline assembler for FP32 mode. --force-fp32 and --force-fp16 Comfy options should both work now 
 - UniPC Sampler now works.  Compiled optional rocblas.dll support for Hip SDK 6.24 in both 803 and 900 archs
 - Added debug kernels with modified code for fp16 accumulation. +8% faster (fp16 only) and helps GPU thermals. For testing only, at 1792x1792 pixels or with video models, you could end up with incoherent prompt following due to renormalization issues
+- Modernized workflows and new custom Attention function added.
 
 ![kobold using zluda](/example-images-videos-workflows/Ultraman-battles-dino-movie.webp)
 
